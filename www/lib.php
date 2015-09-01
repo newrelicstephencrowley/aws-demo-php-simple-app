@@ -9,6 +9,10 @@
 # See the License for the specific language governing permissions and limitations under the License.
 */
 
+if (extension_loaded('newrelic')) {
+  newrelic_set_appname("AWSMeetup2015");
+}
+
 function get_perc()
 	{
 	$info = array();
@@ -95,5 +99,3 @@ function get_mem()
 	
 	return $mem_info;
 	}
-
-
